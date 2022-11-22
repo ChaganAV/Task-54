@@ -4,7 +4,7 @@ int minR = 2; int maxR = 10;
 int rows = rnd.Next(minR,maxR); int columns = rnd.Next(minR,maxR); // строки и колонки массива 
 int[,] numbers = new int[rows,columns]; // массив
 int minRnd = 1; int maxRnd = 10; // для random
-int[] test = {1,4,3,6};
+//int[] test = {1,4,3,6};
 //
 FillRandomArray(numbers);
 Print2DArray(numbers);
@@ -15,24 +15,6 @@ Print2DArray(numbers);
 //PrintArray(test);
 
 // Функции
-void SortArrayTest(int[] array)
-{
-    int temp = 0;
-    for(int i = 0; i < array.Length; i++)
-    {
-        for(int j = i+1; j < array.Length; j++)
-        {
-            Console.WriteLine($"array[i] < array[j] {array[i]} < {array[j]}");
-            if(array[i] < array[j])
-            {
-                temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
-            }
-        }
-        Console.WriteLine($"Проход {i}");
-    }
-}
 void SortArray(int row, int[,] array)
 {
     int temp = 0;
@@ -52,7 +34,6 @@ void SortArray(int row, int[,] array)
 }
 void Sort2DArray(int[,] array2D)
 {
-    int temp = 0;
     for(int row = 0; row < array2D.GetLength(0); row++)
     {
         SortArray(row, array2D);
@@ -81,6 +62,25 @@ void Print2DArray(int[,] array)
         Console.WriteLine();
     }
 }
+/*
+void SortArrayTest(int[] array)
+{
+    int temp = 0;
+    for(int i = 0; i < array.Length; i++)
+    {
+        for(int j = i+1; j < array.Length; j++)
+        {
+            Console.WriteLine($"array[i] < array[j] {array[i]} < {array[j]}");
+            if(array[i] < array[j])
+            {
+                temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+        Console.WriteLine($"Проход {i}");
+    }
+}
 void PrintArray(int[] array)
 {
     for(int i = 0; i < array.Length; i++)
@@ -88,4 +88,4 @@ void PrintArray(int[] array)
         Console.Write($"{array[i]} ");
     }
     Console.WriteLine();
-}
+}*/
